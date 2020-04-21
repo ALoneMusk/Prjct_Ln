@@ -65,7 +65,6 @@ body {
     display: inline-block;
     vertical-align: top;
     color: pink;
-    float: right;
 }
 
 .names {
@@ -144,40 +143,6 @@ body {
     border-color: green;
     background-color: yellow;
     outline-color: transparent;
-}
-
-.slider {
-    -webkit-appearance: none;
-    background: transparent;
-}
-
-.slider:focus {
-    outline: none;
-}
-
-.slider {
-    width: 175px;
-    height: 30px;
-    appearance: none;
-    background-color: transparent;
-    border-radius: 20px;
-    outline: none;
-    overflow: hidden;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 30px;
-    width: 30px;
-    border-radius: 100px;
-    background: fuchsia;
-    cursor: alias;
-}
-
-.slider::-webkit-slider-runnable-track {
-    cursor: alias;
-    background: lightyellow;
-    border-radius: 100px;
 }
 
 .slider2 {

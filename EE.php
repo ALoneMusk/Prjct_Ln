@@ -88,13 +88,13 @@ foreach ($information as $check) {
 						<a class="nav-link" href="First.php">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="about.html">About Us</a>
+						<a class="nav-link" href="inbox.php">Inbox</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="Issue.php">Feedback</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="signout.php">Signout</a>
+						<a class="nav-link" href="Signout.php">Signout</a>
 					</li>
 				</ul>
 			</div>
@@ -120,44 +120,115 @@ foreach ($information as $check) {
 
 							<div class="card-body text-center ">
 								&nbsp;
-								<button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal"> Rate This User </button>
+								<button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#mine"> Rate This User </button>
 								&emsp;
-								<button class="btn btn-success btn-lg" onclick="return fetchuser(' <?php echo ($id); ?> ')"> Show Ratings </button>
+								<button class="btn btn-success btn-lg" data-toggle="modal" data-target="#others"> Show Ratings </button>
 								<h1 id="card_title" class="card-title text-grey"><br> <kbd><?php echo ($info['Name']); ?> </kbd></h1>
 								<h2 id="card_title" class="card-text"><br><span class="badge badge-warning"><?php echo ($info['Username']); ?></span></h2>
-								<textarea class="form-control" rows="5" id="comment" name="text" placeholder="Say something ..."></textarea>
-								<br><button type="submit" name="FromMe" class="btn btn-primary">Send Private Message</button>
+								<form method="POST" action="message.php">
+									<textarea class="form-control" rows="5" id="comment" name="text" placeholder="Say something ..."></textarea>
+									<br><button type="submit" name="FromMe" class="btn btn-primary">Send Private Message</button></form>
 							</div>
 						</div>
 					</div>
 
 
 
-					<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal fade " id="mine" role="dialog">
 						<div class="modal-dialog">
 
 							<!-- Modal content-->
 							<div class="modal-content d-flex ">
 								<div class="modal-header ">
 
-									<h4 class="modal-title"><span class="badge badge-primary text-center">Rate <?php echo ($info['Name']); ?></span></h4>
+									<h4 class="modal-title"><span class="badge badge-primary text-center">Rate Your Friend , maybe. </span></h4>
 								</div>
-								<div class="modal-body">
-									<p>Some shit</p>
+								<div class="modal-body " id="modal_body">
+
 								</div>
-								<div class="modal-footer">
-									<input type="submit" name="<?php echo ($id); ?>" value="Submit Response" class="btn btn-success">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								</div>
+								<form method="POST" action="Post.php">
+									<table cellpadding="10" style="width: 100%">
+
+										<tr>
+											<td><span class="badge badge-primary text-break"> Personality</span>
+											</td>
+											<td><input type="range" name="Personality" class="slider" min="1" max="100" value="20">
+											</td>
+
+										</tr>
+										<tr>
+											<td><span class="badge badge-secondary ">Compatibility</span>
+											</td>
+											<td><input type="range" name="Compatibility" class="slider" min="1" max="100" value="20">
+											</td>
+
+										</tr>
+										<tr>
+											<td><span class="badge badge-success"> Cleanliness</span>
+											</td>
+											<td><input type="range" name="Cleanliness" class="slider" min="1" max="100" value="20">
+											</td>
+
+										</tr>
+										<tr>
+											<td><span class="badge badge-danger"> Education</span>
+											</td>
+											<td><input type="range" name="Education" class="slider" min="1" max="100" value="20">
+											</td>
+
+										</tr>
+										<tr>
+											<td><span class="badge badge-warning">Studies</span>
+											</td>
+											<td><input type="range" name="Studies" class="slider" min="1" max="100" value="20">
+											</td>
+
+										</tr>
+										<tr>
+											<td><span class="badge badge-info"> Language</span>
+											</td>
+											<td><input type="range" name="Language" class="slider" min="1" max="100" value="20">
+											</td>
+
+										</tr>
+
+										<tr>
+											<td><span class="badge badge-light"> Cognizance</span>
+											</td>
+											<td><input type="range" name="Cognizance" class="slider" min="1" max="100" value="20">
+											</td>
+
+										</tr>
+										<tr>
+											<td><span class="badge badge-dark"> Humorous</span>
+											</td>
+											<td><input type="range" name="Humorous" class="slider" min="1" max="100" value="20">
+											</td>
+
+										</tr>
+										<tr>
+											<td><span class="badge badge-warning"> Conclusion</span>
+											</td>
+											<td><input type="range" name="Conclusion" class="slider" min="1" max="100" value="20">
+											</td>
+
+										</tr>
+
+									</table>
+									<div class="modal-footer">
+										<input type="submit" name="<?php echo ($id); ?>" value="Submit Response " class="btn btn-success text-left">
+								</form>
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							</div>
-
 						</div>
+
 					</div>
+		</div>
 
 
 
 
-					<?php
+		<?php
 					$select = "SELECT Username FROM prjct_ln_data";
 
 					$result = mysqli_query($connect, $select);
@@ -207,53 +278,97 @@ foreach ($information as $check) {
 						}
 					}
 
-					?>
+		?>
+		<div class="modal fade " id="others" role="dialog">
+			<div class="modal-dialog">
 
-				<?php } ?>
-			<?php } ?>
+				<!-- Modal content-->
+				<div class="modal-content d-flex ">
+					<div class="modal-header ">
 
-			<div id="side" class="sidebar">
-				<div class="closebtn" onclick="closeSide()">&#10068</div>
-				<div class="overlay-content">
-					<div style="color: red; font-size: 25px; margin-bottom: 50px;">Messages:</div>
-					<?php
-					$selectmsg = "SELECT Username FROM prjct_ln_data";
+						<h4 class="modal-title"><span class="badge badge-secondary">Rate Your Friend , maybe. </span></h4>
+					</div>
+					<div class="modal-body " id="modal_body">
 
-					$resultmsg = mysqli_query($connect, $selectmsg);
+						<table cellpadding="10" style="width: 100%">
+							<tr>
+								<td>
+									<span class="badge badge-primary"> Personality</span>
+								</td>
+								<td>
+									<span class="badge badge-primary"><?php echo ($person); ?></span>
+								</td>
+							</tr>
+							<td>
+								<span class="badge badge-secondary"> Compatibility</span>
+							</td>
+							<td>
+								<span class="badge badge-secondary"><?php echo ($compat); ?></span>
+							</td>
+							</tr>
+							<td>
+								<span class="badge badge-success"> Cleanliness</span>
+							</td>
+							<td>
+								<span class="badge badge-success"><?php echo ($clean); ?></span>
+							</td>
+							</tr>
+							<td>
+								<span class="badge badge-danger">Education</span>
+							</td>
+							<td>
+								<span class="badge badge-danger"><?php echo ($edu); ?></span>
+							</td>
+							</tr>
+							<td>
+								<span class="badge badge-warning"> Studies</span>
+							</td>
+							<td>
+								<span class="badge badge-warning"><?php echo ($stud); ?></span>
+							</td>
+							</tr>
+							<td>
+								<span class="badge badge-info"> Language</span>
+							</td>
+							<td>
+								<span class="badge badge-info"><?php echo ($lang); ?></span>
+							</td>
+							</tr>
+							<td>
+								<span class="badge badge-success"> Cognizance</span>
+							</td>
+							<td>
+								<span class="badge badge-success"><?php echo ($cog); ?></span>
+							</td>
+							</tr>
+							<td>
+								<span class="badge badge-dark"> Humor</span>
+							</td>
+							<td>
+								<span class="badge badge-dark"><?php echo ($humor); ?></span>
+							</td>
+							</tr>
+							<td>
+								<span style="font-weight:bold" class="badge badge-light">Conclusion</span>
+							</td>
+							<td>
+								<span class="badge badge-light"><?php echo ($conc); ?></span>
+							</td>
+							</tr>
+						</table>
 
-					$datamsg = mysqli_fetch_all($resultmsg, MYSQLI_ASSOC);
 
-
-					foreach ($datamsg as $infomsg) {
-
-
-						$tablenamemsg = 'user_' . $infomsg['Username'];
-
-
-
-						$credentialsmsg = "SELECT User, Message FROM `$tablenamemsg`";
-
-
-						$creditmsg = mysqli_query($connect, $credentialsmsg);
-
-						$displaynamemsg = mysqli_fetch_all($creditmsg, MYSQLI_ASSOC);
-
-
-
-						foreach ($displaynamemsg as $msg) {
-							if ($infomsg['Username'] === $username) {
-					?>
-								<li class="messages"> <?php echo $msg['Message']; ?></li>
-							<?php } ?>
-						<?php } ?>
-					<?php } ?>
-					<button class="buttonspan" id="signout" onclick="location.href='Signout.php'">Signout</button>
-					<br>
-					<br>
-					<button class="buttonspan" onclick="window.location.href = 'Issue.php';">Having an issue?</button>
+					</div>
+					<div class="modal-footer">
+						<h3> <span class="badge badge-secondary">Reviewed by <?php echo ($basis); ?> people</span></h3>
+						&emsp;&emsp; &emsp;&emsp;<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
 				</div>
+
 			</div>
 		</div>
+	<?php } ?>
+<?php } ?>
 
 </body>
 

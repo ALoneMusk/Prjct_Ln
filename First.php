@@ -170,13 +170,13 @@ foreach ($information as $check) {
 						<a class="nav-link" href="First.php">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="about.html">About Us</a>
+						<a class="nav-link" href="inbox.php">Inbox</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="Issue.php">Feedback</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="signout.php">Signout</a>
+						<a class="nav-link" href="Signout.php">Signout</a>
 					</li>
 				</ul>
 			</div>

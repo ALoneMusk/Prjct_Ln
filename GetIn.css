@@ -1,158 +1,153 @@
-body
-{
-	background-color: black;
+body {
+    background-color: black;
 }
 
-#pswrdHTML
-{
-	color: peachpuff;
+#pswrdHTML {
+    color: peachpuff;
 }
-#usrnmHTML
-{
-	color: peachpuff;
-}
-#namebut
-{
-	color: black;
-	font-size: 150px;
-	background-color: darkslategray;
-	border-color: transparent;
-	cursor: not-allowed;
-}
-#title
-{
-	width: 100%;
-	font-size: 150px;
-	background-color: darkslategray;
-}
-#upper1
-{
-	text-align: center;
-	background-color: transparent;
-	font-size: 50px;
-	padding: 50px;
-}
-#usrnm
-{
-	color: red;
-	font-size: 30px;
-	background-color: linen;
-	margin-top: 15px;
-	width: 75%;
-	height: 50px;
-	border-radius: 300px;
-	border-color: transparent;
 
+#usrnmHTML {
+    color: peachpuff;
 }
-.HTML
-{
-	margin-bottom: 150px;
-	color: aquamarine;
-}
-.HTML2
-{
-	margin-bottom: 75px;
-}
-#pswrd
-{	
-	font-size: 30px;
-	color: red;
-	background-color: linen;
-	width: 75%;
-	height: 50px;
-	border-radius: 300px;
-	border-color: transparent;
-}
-#sbmt
-{
-	font-size: 20px;
-	height: 30px;
-	border-radius: 300px;
-	width: 40%;
-	border-color: transparent;
-	color: navy;
-	background-color: hotpink;
-	letter-spacing: 2px;
-	cursor: pointer;
 
+#namebut {
+    color: black;
+    font-size: 150px;
+    background-color: darkslategray;
+    border-color: transparent;
+    cursor: not-allowed;
 }
-#sbmt:hover
-{
-	font-size: 40px;
-	height: 50px;
-	width: 50%;
-}
-#forgot
-{
-	cursor: pointer;
-	font-size: 20px;
-	height: 30px;
-	border-radius: 300px;
-	width: 170px;
-	border-color: transparent;
-	color: navy;
-	background-color: cyan;
-	letter-spacing: 2px;
-}
-#reg
-{
-	margin-top: 10px;
-	cursor: pointer;
-	font-size: 20px;
-	height: 30px;
-	border-radius: 300px;
-	width: 25%;
-	border-color: transparent;
-	color: navy;
-	background-color: cyan;
-	letter-spacing: 2px;
-}
-.buttonspan
-{
-	color: red;
-	font-size: 20px;
-	border-color: green;
-	background-color: yellow;
-	outline-color: transparent;
 
+#title {
+    width: 100%;
+    font-size: 150px;
+    background-color: darkslategray;
 }
-.sidebar 
-{
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: black;
-  overflow-x: hidden;
-  transition: 0.5s;
+
+#upper1 {
+    text-align: center;
+    background-color: transparent;
+    font-size: 50px;
+    padding: 50px;
 }
-#span
-{
-	font-size: 50px;
-	display: inline-block; 
-	vertical-align: top;
-	color: red;
-	margin-left: 19.5%;
-	cursor: pointer;
+
+#usrnm {
+    color: red;
+    font-size: 30px;
+    background-color: linen;
+    margin-top: 15px;
+    width: 75%;
+    height: 50px;
+    border-radius: 300px;
+    border-color: transparent;
 }
-.overlay-content
-{
-	color: red;
-	text-align: center;
+
+.HTML {
+    margin-bottom: 150px;
+    color: aquamarine;
 }
-.closebtn
-{
-	color: red;
-	cursor: pointer;
-	font-size: 50px;
-	text-align: center;
-	margin-top: 8px;
-	margin-bottom: 50px;
+
+.HTML2 {
+    margin-bottom: 75px;
 }
-::placeholder
-{
-  color: black;
-  letter-spacing: 5px;
+
+#pswrd {
+    font-size: 30px;
+    color: red;
+    background-color: linen;
+    width: 75%;
+    height: 50px;
+    border-radius: 300px;
+    border-color: transparent;
+}
+
+#sbmt {
+    font-size: 20px;
+    height: 30px;
+    border-radius: 300px;
+    width: 40%;
+    border-color: transparent;
+    color: navy;
+    background-color: hotpink;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#sbmt:hover {
+    font-size: 40px;
+    height: 50px;
+    width: 50%;
+}
+
+#forgot {
+    cursor: pointer;
+    font-size: 20px;
+    height: 30px;
+    border-radius: 300px;
+    width: 170px;
+    border-color: transparent;
+    color: navy;
+    background-color: cyan;
+    letter-spacing: 2px;
+}
+
+#reg {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 30px;
+    border-radius: 300px;
+    width: 25%;
+    border-color: transparent;
+    color: navy;
+    background-color: cyan;
+    letter-spacing: 2px;
+}
+
+.buttonspan {
+    color: red;
+    font-size: 20px;
+    border-color: green;
+    background-color: yellow;
+    outline-color: transparent;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+#span {
+    font-size: 50px;
+    display: inline-block;
+    vertical-align: top;
+    color: red;
+    margin-left: 19.5%;
+    cursor: pointer;
+}
+
+.overlay-content {
+    color: red;
+    text-align: center;
+}
+
+.closebtn {
+    color: red;
+    cursor: pointer;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 50px;
+}
+
+::placeholder {
+    color: black;
+    letter-spacing: 5px;
 }
